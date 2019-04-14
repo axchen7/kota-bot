@@ -10,7 +10,7 @@ public class Main {
         JDA api = null;
 
         try {
-            String token = ""; // TODO fix
+            String token = System.getenv("DISCORD_TOKEN");
             api = new JDABuilder(AccountType.BOT).setToken(token).build();
         } catch (LoginException e) {
             e.printStackTrace();
