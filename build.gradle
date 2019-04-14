@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "4.0.4"
+}
+
+mainClassName = "Main"
+
+group 'org.quixilver8404'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation("net.dv8tion:JDA:3.8.3_462")
+}
