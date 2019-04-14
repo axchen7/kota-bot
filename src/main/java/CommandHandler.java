@@ -73,10 +73,21 @@ public class CommandHandler extends ListenerAdapter{
 	    		new SevenSeconds(evt);
 	    	}
 	    	
+	    	//get 8ball
+	    	if(message.startsWith(Reference.prefix+"8ball")) {
+	    		new EightBall(evt);
+	    	}
+	    	
 	    	//get ships
 	    	if(message.startsWith(Reference.prefix+"ship")) {
 	    		new shipIt(evt);
 	    	}
+	    	
+	    	//get poop
+	    	if(message.startsWith(Reference.prefix+"shit")) {
+	    		new SendMessage(evt,objUser.getAsMention()+" :poop: ");
+	    	}
+	    	
 	    	//get info about a certain team
 	    	if(message.startsWith(Reference.prefix+"get.teaminfo")) {
 	    		new GetTeamInfo(evt);
